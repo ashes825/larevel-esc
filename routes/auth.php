@@ -15,7 +15,7 @@ Route::get('/registerAsEmployer', [RegisteredCompanyController::class, 'create']
                 ->middleware('guest')
                 ->name('registerAsEmployer');
 
-Route::post('/registerAsEmployer', [RegisteredCompanyController\Controller::class, 'store'])
+Route::post('/registerAsEmployer', [RegisteredCompanyController::class, 'store'])
                 ->middleware('guest');
 
 Route::get('/registerAsEmployee', [RegisteredUserController::class, 'create'])

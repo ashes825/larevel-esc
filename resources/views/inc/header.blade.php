@@ -12,7 +12,7 @@
                 @auth
                     <div class="p-10">
                         @csrf
-                        <a href="{{'profile'}}" class="text-sm text-gray-700 dark:text-gray-500 underline">Профиль</a>
+                        <a href="{{'profile'}}" class="text-sm text-gray-700 dark:text-gray-500 underline">{{Auth::user()->secondName}} {{Auth::user()->name}}</a>
                         <a href="{{'logout'}}" class="text-sm text-gray-700 dark:text-gray-500 underline pr-5">Выйти</a>
                     </div>
                 @endauth
