@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CVController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,9 +25,11 @@ Route::get('/search', function () {
     return view('search');
 })->name('search');
 
-Route::get('/profile', function () {
-    return view('profile');
-});
+Route::get('/profile', [CVController::class,'show'])->name('profile');
+
+Route::get('/profile/CV/create', [CVController::class,'create'])->middleware(['auth'])->name('createCV');
+
+Route::get('/profile/CV/create/submit', [CVController::class,'store'])->middleware(['auth'])->name('createCV-submit');
 
 require __DIR__.'/auth.php';
 

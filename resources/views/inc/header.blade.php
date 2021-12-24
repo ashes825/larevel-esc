@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-around align-items-center mb-4 bg-white border-bottom">
     <a href="/" class="px-6 py-4 sm:block">
-        <span class="fs-3">ESC</span>
+        <h2 class="h2">ESC</h2>
     </a>
     <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
         <div class=" px-6 py-4 sm:block">

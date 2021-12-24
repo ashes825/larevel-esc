@@ -1,12 +1,33 @@
 <div class="jumbotron" style="padding: 30px">
 {{--    <h1>{{$data-name }} — {{ }}</h1>--}}
     <div class="row">
-        @endif
         <div class="col-8" >
 
-{{--            <p>{{ $data->info}}</p>--}}
-{{--            <p><small>{{$data-created_at }}</small></p>--}}
-                <a href=""><button class="btn btn-primary">Посмотреть</button></a>
+            <p>{{ $itemVacancy->name}}</p>
+            <p>{{ $itemVacancy->secondName}}</p>
+            <p>{{ $itemVacancy->patronymic}}</p>
+            <p>{{ $itemVacancy->currentPlaceOfLive}}</p>
+            <p>{{ $itemVacancy->profEducation}}</p>
+            <p>{{ $itemVacancy->workExp}}</p>
+
+            @if($itemVacancy->businessTrips)
+            <p>Да</p>
+                @else
+                 <p>Нет</p>
+            @endif
+
+            @if($itemVacancy->relocate)
+                <p>Да</p>
+            @else
+                <p>Нет</p>
+            @endif
+
+            @if($itemVacancy->gender)
+                <p>Мужской</p>
+            @else
+                <p>Женский</p>
+            @endif
+
         </div>
     </div>
 </div>
