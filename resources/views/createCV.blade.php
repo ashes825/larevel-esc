@@ -12,8 +12,23 @@
         </div>
 
         <div class="form-group">
+            <label for="specialization">Специализация</label>
+            <input class= "form-control" name="specialization" type="text" placeholder="Специализация" required>
+        </div>
+
+        <div class="form-group">
             <label for="profEducation">Профессиональное образование</label>
             <input class= "form-control" name="profEducation" type="text" placeholder="Профессиональное образование" required>
+        </div>
+
+        <div class="form-group">
+            <label for="previousPlaceWork">Прошлое место работы</label>
+            <input class= "form-control" name="previousPlaceWork" type="text" placeholder="Прошлое место работы" required>
+        </div>
+
+        <div class="form-group">
+            <label for="desireSalary">Желаемая зарплата, в рублях</label>
+            <input class= "form-control" name="desireSalary" type="text" placeholder="Желаемая зарплата, в рублях" required>
         </div>
 
         <div class="form-group">

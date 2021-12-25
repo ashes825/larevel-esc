@@ -3,30 +3,36 @@
     <div class="row">
         <div class="col-8" >
 
-            <p>{{ $itemVacancy->name}}</p>
-            <p>{{ $itemVacancy->secondName}}</p>
-            <p>{{ $itemVacancy->patronymic}}</p>
-            <p>{{ $itemVacancy->currentPlaceOfLive}}</p>
-            <p>{{ $itemVacancy->profEducation}}</p>
-            <p>{{ $itemVacancy->workExp}}</p>
+            <p>Имя: {{ $itemVacancy->name}}</p>
+            <p>Фамилия: {{ $itemVacancy->secondName}}</p>
+            <p>Отчество: {{ $itemVacancy->patronymic}}</p>
+            <p>Текущее место жительства: {{ $itemVacancy->currentPlaceOfLive}}</p>
+            <p>Профессиональное образование: {{ $itemVacancy->profEducation}}</p>
+            <p>Опыт работы: {{ $itemVacancy->workExp}}</p>
+            <p>Желаемая зарплата: {{ $itemVacancy->specialization}}</p>
+            <p>Прошлое место работы: {{ $itemVacancy->previousPlaceWork}}</p>
+            <p>Желаемая зарплата: {{ $itemVacancy->desireSalary}}</p>
 
             @if($itemVacancy->businessTrips)
-            <p>Да</p>
-                @else
-                 <p>Нет</p>
+                <p>Готоность к командировкам: да</p>
+            @else
+                <p>Готоность к комадировкам: нет</p>
             @endif
 
             @if($itemVacancy->relocate)
-                <p>Да</p>
+                <p>Готовность к переезду: да</p>
             @else
-                <p>Нет</p>
+                <p>Готовность к переезду: нет</p>
             @endif
 
             @if($itemVacancy->gender)
-                <p>Мужской</p>
+                <p>Пол: мужской</p>
             @else
-                <p>Женский</p>
+                <p>Пол: женский</p>
             @endif
+
+            <a href=""><button class="btn btn-primary">Редактировать профиль</button></a>
+            <a href="{{route('createCV')}}"><button class="btn btn-primary">Создать резюме</button></a>
 
         </div>
     </div>

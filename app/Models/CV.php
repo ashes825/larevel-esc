@@ -20,5 +20,8 @@ class CV extends Model
         'businessTrips',
         'relocate',
         'gender',
+        'specialization',
+        'previousPlaceWork',
+        'desireSalary',
     ];
 }

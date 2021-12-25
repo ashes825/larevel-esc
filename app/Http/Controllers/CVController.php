@@ -20,6 +20,9 @@ class CVController extends Controller
             'businessTrips' => $request->businessTrips,
             'relocate' => $request->relocate,
             'gender' => $request->gender,
+            'specialization' => $request->specialization,
+            'previousPlaceWork' => $request->previousPlaceWork,
+            'desireSalary' => $request->desireSalary,
         ]);
         return redirect()->route('profile');
     }
