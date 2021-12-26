@@ -21,10 +21,6 @@ Route::get('/registration', function () {
     return view('registration');
 });
 
-Route::get('/search', function () {
-    return view('search');
-})->name('search');
-
 Route::get('/profile', [CVController::class,'show'])->name('profile');
 
 Route::get('/profile/CV/create', [CVController::class,'create'])->middleware(['auth'])->name('createCV');
