@@ -31,5 +31,9 @@ Route::get('/profile/CV/create', [CVController::class,'create'])->middleware(['a
 
 Route::get('/profile/CV/create/submit', [CVController::class,'store'])->middleware(['auth'])->name('createCV-submit');
 
+Route::get('/profile/CV/{id}/edit', [CVController::class,'edit'])->middleware(['auth'])->name('editCV');
+
+Route::get('/profile/CV/edit/submit', [CVController::class,'update'])->middleware(['auth'])->name('editCV-submit');
+
 require __DIR__.'/auth.php';
 
