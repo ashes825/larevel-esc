@@ -52,7 +52,7 @@ class SController extends Controller
                         Опыт работы: ". $row['workExp'] ."<br>
                         Специальность: ". $row['specialization'] ."<br>
                         Прошлое место работы: ". $row['previousPlaceWork'] ."<br>
-                        Желаемая зарплата (в рублях): ". $row['desireSalary'] ."<br>";
+                        Желаемая зарплата, в рублях: ". $row['desireSalary'] ."<br>";
                     if($row['gender'])
                         echo "Готоность к командировкам: да<br>";
                     else

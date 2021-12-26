@@ -9,7 +9,7 @@
             <p>Текущее место жительства: {{ $itemVacancy->currentPlaceOfLive}}</p>
             <p>Профессиональное образование: {{ $itemVacancy->profEducation}}</p>
             <p>Опыт работы: {{ $itemVacancy->workExp}}</p>
-            <p>Желаемая зарплата: {{ $itemVacancy->specialization}}</p>
+            <p>Желаемая зарплата, в рублях: {{ $itemVacancy->specialization}}</p>
             <p>Прошлое место работы: {{ $itemVacancy->previousPlaceWork}}</p>
             <p>Желаемая зарплата: {{ $itemVacancy->desireSalary}}</p>
 
