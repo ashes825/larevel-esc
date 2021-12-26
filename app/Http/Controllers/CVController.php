@@ -36,4 +36,21 @@ class CVController extends Controller
     public function edit($id){
         return view('editCV', ['data'=>(CV::findOrFail($id))]);
     }
+    public function update($id, Request $request)
+    {
+        CV::findOrFail($id)->update([
+            'currentPlaceOfLive' => $request->currentPlaceOfLive,
+            'profEducation' => $request->profEducation,
+            'workExp' => $request->workExp,
+            'businessTrips' => $request->businessTrips,
+            'relocate' => $request->relocate,
+            'gender' => $request->gender,
+            'specialization' => $request->specialization,
+            'previousPlaceWork' => $request->previousPlaceWork,
+            'desireSalary' => $request->desireSalary,
+        ]);
+
+        return redirect()->route('profile');
+    }
+
 }
