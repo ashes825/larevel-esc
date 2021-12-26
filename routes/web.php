@@ -27,8 +27,12 @@ Route::get('/profile/CV/create', [CVController::class,'create'])->middleware(['a
 
 Route::get('/profile/CV/create/submit', [CVController::class,'store'])->middleware(['auth'])->name('createCV-submit');
 
+Route::get('/profile/CV/{id}/edit', [CVController::class,'edit'])->middleware(['auth'])->name('editCV');
+
+Route::get('/profile/CV/{id}/edit/submit', [CVController::class,'update'])->middleware(['auth'])->name('editCV-submit');
 //Женя
 Route::get('/search','App\Http\Controllers\SController@search')->name('search');
+
 
 require __DIR__.'/auth.php';
 

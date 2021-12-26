@@ -31,9 +31,6 @@
                 <p>Пол: женский</p>
             @endif
 
-            <a href=""><button class="btn btn-primary">Редактировать профиль</button></a>
-            <a href="{{route('createCV')}}"><button class="btn btn-primary">Создать резюме</button></a>
-
         </div>
     </div>
 </div>
