@@ -33,4 +33,7 @@ class CVController extends Controller
 
         return view('profile', ['data'=>CV::where('user_id', auth()->user()->id)->get()]);
     }
+    public function edit($id){
+        return view('editCV', ['data'=>(CV::findOrFail($id))]);
+    }
 }
