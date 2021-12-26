@@ -21,15 +21,14 @@ Route::get('/registration', function () {
     return view('registration');
 });
 
-Route::get('/search', function () {
-    return view('search');
-})->name('search');
-
 Route::get('/profile', [CVController::class,'show'])->name('profile');
 
 Route::get('/profile/CV/create', [CVController::class,'create'])->middleware(['auth'])->name('createCV');
 
 Route::get('/profile/CV/create/submit', [CVController::class,'store'])->middleware(['auth'])->name('createCV-submit');
+
+//Женя
+Route::get('/search','App\Http\Controllers\SController@search')->name('search');
 
 require __DIR__.'/auth.php';
 
