@@ -1,44 +1,38 @@
+@extends('layouts.app')
+
 @section('title','Редактирование резюме')
 
 @section('content')
-    <h3 class="h3" style="text-align: center">Создание резюме</h3>
-    <form class="flex justify-content-center searcher" action="{{ route('editCV-submit') }}" method="get">
         <h3 class="h3" style="text-align: center">Редактирование резюме</h3>
-        <form class="flex justify-content-center searcher" action="{{route('edit-submit',$data->id)}}" method="get">
+        <form class="flex justify-content-center searcher" action="{{route('editCV-submit',$data->id)}}" method="get">
             @csrf
             <div class="form-group">
                 <label for="currentPlaceOfLive">Место текущего проживания</label>
-                <input class= "form-control" name="currentPlaceOfLive" type="text" placeholder="Место текущего проживания" required>
                 <input class= "form-control" name="currentPlaceOfLive" type="text" placeholder="Текущее место проживания" value="{{$data->currentPlaceOfLive}}" required>
             </div>
 
             <div class="form-group">
                 <label for="specialization">Специализация</label>
-                <input class= "form-control" name="specialization" type="text" placeholder="Специализация" required>
                 <input class= "form-control" name="specialization" type="text" placeholder="Специализация" value="{{$data->specialization}}" required>
             </div>
 
             <div class="form-group">
                 <label for="profEducation">Профессиональное образование</label>
-                <input class= "form-control" name="profEducation" type="text" placeholder="Профессиональное образование" required>
                 <input class= "form-control" name="profEducation" type="text" placeholder="Профессиональное образование" value="{{$data->profEducation}}" required>
             </div>
 
             <div class="form-group">
                 <label for="previousPlaceWork">Прошлое место работы</label>
-                <input class= "form-control" name="previousPlaceWork" type="text" placeholder="Прошлое место работы" required>
                 <input class= "form-control" name="previousPlaceWork" type="text" placeholder="Прошлое место работы" value="{{$data->previousPlaceWork}}" required>
             </div>
 
             <div class="form-group">
                 <label for="desireSalary">Желаемая зарплата, в рублях</label>
-                <input class= "form-control" name="desireSalary" type="text" placeholder="Желаемая зарплата, в рублях" required>
                 <input class= "form-control" name="desireSalary" type="text" placeholder="Желаемая зарплата, в рублях" value="{{$data->desireSalary}}" required>
             </div>
 
             <div class="form-group">
                 <label for="workExp">Опыт работы</label>
-                <input class= "form-control" name="workExp" type="text" placeholder="Опыт работы" required>
                 <input class= "form-control" name="workExp" type="text" placeholder="Опыт работы" value="{{$data->workExp}}" required>
             </div>
 
@@ -64,7 +58,6 @@
                 </select>
             </div>
 
-            <button class="btn btn-primary"type="submit">Обновить резюме</button>
             <button class="btn btn-primary"type="submit">Сохранить</button>
         </form>
 @endsection
