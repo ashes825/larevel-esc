@@ -31,5 +31,8 @@ Route::get('/profile/CV/create', [CVController::class,'create'])->middleware(['a
 
 Route::get('/profile/CV/create/submit', [CVController::class,'store'])->middleware(['auth'])->name('createCV-submit');
 
+//Женя
+Route::get('/search','App\Http\Controllers\SController@search')->name('search');
+
 require __DIR__.'/auth.php';
 
