@@ -2,11 +2,18 @@
 
 @section('title','Результат поиска')
 
-
 @section('content')
 
-//не используется совсем, возможно стоит удалить
 
     <h3>Результат поиска</h3>
+    @isset($data)
+        @foreach($data as $itemSearch)
+            @include('inc.itemSearch')
+        @endforeach
+    @endisset
+    @empty($data)
+        Ничего не найдено
+    @endempty
+
 
 @endsection

@@ -3,8 +3,8 @@
 @section('title','Создание резюме')
 
 @section('content')
-    <h3 class="h3" style="text-align: center">Редактирование резюме</h3>
-    <form class="flex justify-content-center searcher" action="{{route('editCV-submit',$data->id)}}" method="get">
+    <h3 class="h3" style="text-align: center">Создание резюме</h3>
+    <form class="flex justify-content-center searcher" action="{{route('createCV-submit')}}" method="get">
         @csrf
         <div class="form-group">
             <label for="currentPlaceOfLive">Место текущего проживания</label>

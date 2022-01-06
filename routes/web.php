@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CVController;
+use App\Http\Controllers\SController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +14,9 @@ use App\Http\Controllers\CVController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', function () {return view('home');})->name('home');
 
-Route::get('/registration', function () {
-    return view('registration');
-});
+Route::get('/registration', function () {return view('registration');});
 
 Route::get('/profile', [CVController::class,'show'])->name('profile');
 
@@ -33,6 +30,7 @@ Route::get('/profile/CV/{id}/edit/submit', [CVController::class,'update'])->midd
 //Женя
 Route::get('/search','App\Http\Controllers\SController@search')->name('search');
 
+Route::get('/search/{id}', [SController::class,'show'])->name('fullCV');
 
 require __DIR__.'/auth.php';
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
@@ -11,8 +11,10 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function testHomeButton()
     {
-        $this->assertTrue(true);
+        // Проверяет возвращает ли главная страница http статус 200(страница работает нормально)
+        $response = $this->get('/');
+        $response->assertOk();
     }
 }
